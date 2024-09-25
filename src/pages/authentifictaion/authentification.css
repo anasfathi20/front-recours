@@ -1,0 +1,93 @@
+.container-fluid {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-left {
+  flex: 1;
+  height: 100%;
+  background-image: url('https://www.dreamjob.ma/wp-content/uploads/2023/12/Asd.ma-1.png');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.card-left::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(43, 117, 76, 0.7);
+  z-index: -1;
+}
+
+.form-container {
+  flex: 1;
+  height: auto;
+  background-color: white;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.form-container form {
+  width: 100%; /* Ensure the form takes up full width of the container */
+}
+
+.btn-block {
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Center the button horizontally */
+}
+
+.form-control {
+  text-align: center;
+}
+
+.form-control:disabled {
+  background-color: #e9ecef;
+}
+
+.btn-lg.disabled {
+  background-color: #d3d3d3;
+  border-color: #d3d3d3;
+}
+
+/* Styling for the 'Me connecter' button */
+.btn-primary {
+  background-color: transparent;
+  border: 2px solid #2b754c; /* Green border */
+  color: #2b754c; /* Green text */
+  border-radius: 25px; /* Rounded corners */
+  font-weight: bold; /* Bold text */
+  padding: 10px 20px; /* Adjust padding */
+  transition: background-color 0.3s, color 0.3s; /* Hover effect */
+  width: auto; /* Adjust width to fit content */
+}
+
+.btn-primary:hover {
+  background-color: #2b754c; /* Green background on hover */
+  color: white; /* White text on hover */
+}
+
+.text-center {
+  text-align: center;
+  margin-top: 20px; /* Add some spacing */
+}

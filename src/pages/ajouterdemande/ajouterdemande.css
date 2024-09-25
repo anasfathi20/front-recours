@@ -1,0 +1,156 @@
+.headerA {
+  position: relative; 
+  background-color: #264b39;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(220, 216, 216, 0.1);
+}
+
+
+.logoA {
+  display: flex;
+  align-items: center;
+}
+
+
+.logoA img {
+  height: 50px;
+  margin-right: 10px;
+}
+
+.separator {
+  width: 2px;
+  height: 50px;
+  background-color: #fff;
+  margin: 0 15px;
+}
+
+.logoA h1 {
+  margin: 0;
+  color: #fff;
+}
+
+
+.navA {
+  position: absolute; 
+  left: 0;
+  right: 0;
+  background-color: #264b39; 
+  display: flex;
+  justify-content: center; 
+  padding: 10px 0; 
+  margin: 0; 
+  list-style: none;
+  z-index: 1; 
+}
+
+.navA ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+.navA li {
+  margin-left: 20px;
+}
+
+
+.navA a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.navA a:hover {
+  color: #ffc107;
+  transform: translateY(-3px);
+}
+.containerA {
+  width: 100%;
+  margin: 20px 0; 
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px; 
+}
+
+
+h1 {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+
+.form-groupA {
+  margin-bottom: 20px;
+  text-align: center; 
+}
+
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  width: 66%;
+  text-align: left; 
+  margin: 0 auto 5px; 
+}
+
+
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+  width: 66%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  box-sizing: border-box;
+  margin: 0 auto; 
+  display: block; 
+}
+
+
+button {
+  width: 66%;
+  padding: 12px;
+  background-color: #264b39;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin: 10px auto;  
+  display: block; 
+}
+
+button:hover {
+  background-color: #1e3a2f;
+}
+
+
+.button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+
+.return-button {
+  background-color: #ffc107;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  padding: 12px;
+  display: block;
+  width: fit-content;
+  margin: 20px auto; 
+}
+
+.return-button:hover {
+  background-color: #ffa000;
+}
