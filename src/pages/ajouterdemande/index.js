@@ -40,9 +40,9 @@ function Ajouterdemande() {
       <div className="form-groupA">
         <select id="demand">
           <option value="---">Demande</option>
-          <option value="option1">aide forfaiaire / id demande</option>
-          <option value="option2">aide forfaitaire /id demande </option>
-          <option value="option3">aide forfaitaire /id demande </option>
+          <option value="1">Aide Forfaitaire</option>
+          <option value="2">Allocation Mensuelle</option>
+          <option value="3">Allocation Naissance</option>
         </select>
       </div>
 

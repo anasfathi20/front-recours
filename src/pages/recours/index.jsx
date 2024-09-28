@@ -64,7 +64,7 @@ const Recours = () => {
                         </tr>
                     </thead>
                     <tbody>
-                    { recours && recours.map((recours: any, index: number) => (
+                    { recours && recours.map((answer, i) => (
                         <tr>
                             <td>{recours.created_AT}</td>
                             <td>{recours.demand_TYPE_ID.label_FR}<br />N° {recours.id}</td>
@@ -73,29 +73,6 @@ const Recours = () => {
                             <td><button className="button" onClick={handleShowModal}>Voir le détail</button></td>
                         </tr>
                         ))}
-                    
-                    
-                        <tr>
-                            <td>25/04/2024</td>
-                            <td>Allocation Mensuelle<br />N° 562172</td>
-                            <td>Recours</td>
-                            <td>Demande de recours annulée</td>
-                            <td><button className="button" onClick={handleShowModal}>Voir le détail</button></td>
-                        </tr>
-                        <tr>
-                            <td>24/04/2024</td>
-                            <td>Aide Forfaitaire<br />N° 5095126</td>
-                            <td>Recours</td>
-                            <td>Demande de recours annulée</td>
-                            <td><button className="button" onClick={handleShowModal}>Voir le détail</button></td>
-                        </tr>
-                        <tr>
-                            <td>09/07/2024</td>
-                            <td>Allocation Mensuelle<br />N° 562172</td>
-                            <td>Test</td>
-                            <td>Demande de recours annulée</td>
-                            <td><button className="button" onClick={handleShowModal}>Voir le détail</button></td>
-                        </tr>
                     </tbody>
                 </table>
 
