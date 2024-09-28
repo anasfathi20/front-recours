@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import './recours.css';
 import { NavLink } from 'react-router-dom';
 import '@fortawesome/fontawesome-free/css/all.min.css'; 
@@ -7,9 +7,19 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 const Recours = () => {
     const [showModal, setShowModal] = useState(false);
+    const [recours, setRecours] = useState(null);
 
     const handleShowModal = () => setShowModal(true);
     const handleCloseModal = () => setShowModal(false);
+
+    useContext(()=>{
+        fetch("http://127.0.0.1:8080/api/demande/get",{
+            headers:{
+                "Authorization":`Basic ${localStorage.getItem("sessionID")}`
+            }
+          }
+          ).then(res=>res.json()).then(res=>setRecours(res))
+    },[])
 
     return (
         <div className="containerN">
@@ -54,6 +64,17 @@ const Recours = () => {
                         </tr>
                     </thead>
                     <tbody>
+                    { recours && recours.map((recours: any, index: number) => (
+                        <tr>
+                            <td>{recours.created_AT}</td>
+                            <td>{recours.demand_TYPE_ID.label_FR}<br />N° {recours.id}</td>
+                            <td>Recours</td>
+                            <td>{recours.last_STATE.tsi_L_TSI}</td>
+                            <td><button className="button" onClick={handleShowModal}>Voir le détail</button></td>
+                        </tr>
+                        ))}
+                    
+                    
                         <tr>
                             <td>25/04/2024</td>
                             <td>Allocation Mensuelle<br />N° 562172</td>

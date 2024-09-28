@@ -36,7 +36,19 @@ const Authentification = () => {
           <div className="d-grid mb-3">
             <a href="/pp">
               <button
-                type="submit"
+                onClick={()=>{
+                  fetch("http://127.0.0.1:8080/api/auth/login",{
+                    method:"POST",
+                    headers:{
+                        "Content-Type":"application/json"
+                    },
+                    body:JSON.stringify({
+                      "IDCS":idcs,
+                      "Password":"Fathi123" 
+                    })
+                  }
+                  ).then(res=>res.text()).then(res=>localStorage.setItem("sessionID", res))
+                }}
                 className="btn btn-primary" // Button now has your custom styling
                 disabled={isButtonDisabled}
               >
